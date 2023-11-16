@@ -38,9 +38,12 @@ void mouseClicked(){
   int faces;
   int value;
   int r, g, b, a;
+  int wid, hig;
 
   Die() { //constructor
     faces = 6;
+    wid = 20;
+    hig = 20;
     r = (int) (Math.random()*256);
     g = (int) (Math.random()*256);
     b = (int) (Math.random()*256);
@@ -62,7 +65,7 @@ void mouseClicked(){
     rect(x, y, width, height);
     for (int i = 0; i < value; i++) {
       fill(r, g, b, a/2);
-      ellipse(x + width/(value + 1)*(i + 1), y + height/(value + 1)*(i + 1), 20, 20);
+      ellipse(x + width/(value + 1)*(i + 1), y + height/(value + 1)*(i + 1), wid, hig);
     }
   }
 
